@@ -14,6 +14,30 @@ int main(){
     scanf("%d",&bt[i]);
     t[i]=bt[i];
   }
+  int m,k,ra[10],tem;
+  for(m=0;m<n-1;m++){
+    for(k=m+1;k<n;k++){
+        if(b[m]>b[k]){
+            tem= b[m];
+            b[m]=b[k];
+            b[k]=tem;
+        }
+    }
+   }
+   int z=0;
+   for(m=0;m<n;m++){
+    for(k=0;k<n;k++){
+        if(b[m]==at[k]){
+            ra[z]=k;
+            z++;
+        }
+
+    }
+   }
+   for(m=0;m<n;m++){
+    printf(" %d",ra[m]);
+   }
+
   int tp = n,time,tat,ct,wt;
 
   printf("\nprocess\t\tarrival\t\tburst\t\tcompletion\t\ttat\t\twt\n");
