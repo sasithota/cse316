@@ -1,7 +1,7 @@
 #include<stdio.h>
 
 int main(){
-  int timeQuantum,n,bt[10],at[10],t[10],pl[10];
+  int timeQuantum,n,bt[10],at[10],t[10],pl[10],b[10];
   printf("\nEnter Number of processes: ");
   scanf("%d",&n);
   printf("\nEnter Time Quantum : ");
@@ -9,6 +9,7 @@ int main(){
   for(int i=0;i<n;i++){
     printf("\nEnter Arrival time for p%d: ",i);
     scanf("%d",&at[i]);
+    b[i]=at[i];
     printf("\nEnter Burst time for p%d: ",i);
     scanf("%d",&bt[i]);
     t[i]=bt[i];
