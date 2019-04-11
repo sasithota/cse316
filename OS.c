@@ -41,10 +41,14 @@ int main(){
   int tp = n,time,tat,ct,wt;
 
   printf("\nprocess\t\tarrival\t\tburst\t\tcompletion\t\ttat\t\twt\n");
-  int j=0,f=0;
+  int j,f=0,d=0;
 
   while(tp!=0){
-
+            j=ra[d];
+            if(at[j]>time){
+                    time++;
+                    continue;
+            }
             if(t[j]<=timeQuantum && t[j]>0){
                 time = time + t[j];
                 ct = time;
@@ -65,14 +69,14 @@ int main(){
                 f=0;
             }
 
-            if(j==n-1){
-                j=0;
+            if(d==n-1){
+                d=0;
             }
-            else if(at[j+1]<=time){
-                    j++;
+            else if(b[d+1]<=time){
+                    d++;
                     }
             else{
-                j=0;
+                d=0;
             }
         }
 }
